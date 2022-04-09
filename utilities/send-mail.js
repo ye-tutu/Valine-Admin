@@ -109,9 +109,9 @@ exports.notice = (comment) => {
     const QmsgTemplate = `您在 ${SITE_NAME} 上有新评论啦！
 ${NICK} 给您的回复如下：
            
-    ${comment}
+    ${comment}`;
         
-您可以点击 ${POST_URL_QMSG} 前去查看！`;
+//您可以点击 ${POST_URL_QMSG} 前去查看！`;
 
     // 自定义模板以及默认模板
     let _template = process.env.QMSG_TEMPLATE || QmsgTemplate;

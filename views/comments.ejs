@@ -34,12 +34,12 @@
                             }else{
                                 let size = 100
                                 let hash = Crypto.createHash('md5').update(mail.trim().toLowerCase()).digest("hex")
-                                return `//sdn.geekzu.org/avatar/${hash}?s=${size}&d=identicon`;
+                                return `//cravatar.cn/avatar/${hash}?s=${size}&d=identicon`;
                             }
                         }else{
                             let size = 100
                             let hash = Crypto.createHash('md5').update(mail.trim().toLowerCase()).digest("hex")
-                            return `//sdn.geekzu.org/avatar/${hash}?s=${size}&d=identicon`;
+                            return `//cravatar.cn/avatar/${hash}?s=${size}&d=identicon`;
                         }
                     } %>
                     <% var url = getMailImg(comment_list[i].get('mail')) %>

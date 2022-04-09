@@ -86,18 +86,20 @@ exports.notice = (comment) => {
   }
 
   if (process.env.QMSG_KEY != null) {
-    if (process.env.QQ_SHAKE != null) {
-      //var shakeTemplate = process.env.SHAKE_TEMPLATE || "79";
-      request(
-        //`https://qmsg.zendee.cn/send/${process.env.QMSG_KEY}?msg=@face=${shakeTemplate}@`,
-        function (error, response, body) {
-          if (error) return console.log("调起QQ戳一戳功能异常：", error);
-          if (body) body = JSON.parse(body);
-          if (response.statusCode === 200 && body.success === true) console.log("已成功戳一戳！");
-          else console.warn("QQ戳一戳失败:", body);
-        }
-      );
-    }
+    // if (process.env.QQ_SHAKE != null) {
+    //   var shakeTemplate = process.env.SHAKE_TEMPLATE || "79";
+    //   request(
+    //     `https://qmsg.zendee.cn/send/${process.env.QMSG_KEY}?msg=@face=${shakeTemplate}@`,
+    //     //`https://qmsg.zendee.cn/send/${process.env.QMSG_KEY}?msg=@face=${shakeTemplate}@`,
+    //     function (error, response, body) {
+    //       //if (error) return console.log("调起QQ戳一戳功能异常：", error);
+    //       //if (body) body = JSON.parse(body);
+    //       //if (response.statusCode === 200 && body.success === true) console.log("已成功戳一戳！");
+    //       console.log("已成功戳一戳！");
+    //       //else console.warn("QQ戳一戳失败:", body);
+    //     }
+    //   );
+    // }
     var comment = $(
       COMMENT.replace(/<img.*?src="(.*?)".*?>/g, "\n[图片]$1\n").replace(/<br>/g, "\n")
     )
